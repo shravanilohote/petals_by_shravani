@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <circle cx="32" cy="32" r="30" fill="#FFF8F2" stroke="#F3D9DE" stroke-width="2"/>
+  <!-- Stem -->
+  <path d="M32 38 Q30 48 33 54" stroke="#9FAF92" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M32 44 Q38 43 39 40" stroke="#9FAF92" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Flower Petals (Handmade Chenille loop style) -->
+  <g transform="translate(32, 28)">
+    <!-- 5 Petals -->
+    <ellipse cx="0" cy="-12" rx="5" ry="7" fill="#C78391" opacity="0.95"/>
+    <ellipse cx="11.4" cy="-3.7" rx="5" ry="7" transform="rotate(72 11.4 -3.7)" fill="#F3D9DE"/>
+    <ellipse cx="7" cy="9.7" rx="5" ry="7" transform="rotate(144 7 9.7)" fill="#C78391" opacity="0.95"/>
+    <ellipse cx="-7" cy="9.7" rx="5" ry="7" transform="rotate(216 -7 9.7)" fill="#F3D9DE"/>
+    <ellipse cx="-11.4" cy="-3.7" rx="5" ry="7" transform="rotate(288 -11.4 -3.7)" fill="#C78391" opacity="0.95"/>
+    <!-- Flower Center -->
+    <circle cx="0" cy="0" r="5" fill="#F4D35E"/>
+    <circle cx="0" cy="0" r="2.5" fill="#E0A926"/>
+  </g>
+</svg>

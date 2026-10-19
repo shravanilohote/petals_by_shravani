@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF8F2;
+  --color-cream-light: #FFFCF9;
+  --color-cream-dark: #F5EAE1;
+  --color-blush: #F3D9DE;
+  --color-blush-light: #FAF0F3;
+  --color-blush-dark: #E2BEC5;
+  --color-dusty-rose: #C78391;
+  --color-dusty-rose-dark: #A86473;
+  --color-sage: #C8D4BE;
+  --color-sage-light: #E7EFE3;
+  --color-sage-dark: #99AA8F;
+  --color-berry: #704657;
+  --color-berry-dark: #532F3F;
+  --color-warm-brown: #45353A;
+  --color-warm-muted: #7E6C72;
+
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-handwriting: 'Caveat', cursive, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-warm-brown);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Animations */
+@keyframes petalFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes gentleSway {
+  0%, 100% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmerPetal {
+  0% {
+    transform: scale(0.9) rotate(-4deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(4deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-petal-float {
+  animation: petalFloat 6s ease-in-out infinite;
+}
+
+.animate-gentle-sway {
+  animation: gentleSway 5s ease-in-out infinite;
+}
+
+.animate-soft-pulse {
+  animation: softPulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer-petal {
+  animation: shimmerPetal 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #F3D9DE;
+  border-radius: 9999px;
+  border: 2px solid #FFF8F2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C78391;
+}
+
+/* Accessibility: respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
